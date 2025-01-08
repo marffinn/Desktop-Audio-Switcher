@@ -7,10 +7,16 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <UseWPF>true</UseWPF>
+    <ApplicationIcon>sound-card.ico</ApplicationIcon>
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="icons.png" />
     <None Remove="sound-card.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="sound-card.ico" />
   </ItemGroup>
 
   <ItemGroup>
@@ -20,6 +26,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="icons.png" />
     <Resource Include="sound-card.png" />
   </ItemGroup>
 

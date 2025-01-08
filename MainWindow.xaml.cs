@@ -3,6 +3,7 @@ using System.Linq;
 using System.Windows;
 using NAudio.CoreAudioApi;
 using AudioSwitcher.AudioApi.CoreAudio;
+using System.Windows.Input;
 
 namespace AudioDeviceSwitcher
 {
@@ -106,6 +107,17 @@ namespace AudioDeviceSwitcher
                 return fullName.Substring(0, maxLength) + "...";
             }
             return fullName;
+        }
+        private void Window_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if (e.LeftButton == MouseButtonState.Pressed)
+            {
+                DragMove();
+            }
+        }
+        private void CloseApp(object sender) 
+        {
+            Close();
         }
     }
 }
