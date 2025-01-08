@@ -3,6 +3,7 @@ using System.Linq;
 using System.Windows;
 using NAudio.CoreAudioApi;
 using AudioSwitcher.AudioApi.CoreAudio;
+using System.Windows.Input;
 
 namespace AudioDeviceSwitcher
 {
@@ -17,6 +18,7 @@ namespace AudioDeviceSwitcher
         public MainWindow()
         {
             InitializeComponent();
+
             enumerator = new MMDeviceEnumerator();
             devices = enumerator.EnumerateAudioEndPoints(DataFlow.Render, DeviceState.Active);
             audioController = new CoreAudioController();
@@ -43,14 +45,14 @@ namespace AudioDeviceSwitcher
         private void AdjustListBoxHeight()
         {
             int itemCount = DeviceListBox.Items.Count;
-            DeviceListBox.Height = itemCount * ItemHeight;
+            DeviceListBox.Height = itemCount * ItemHeight - 7;
         }
 
         private void AdjustWindowHeight()
         {
             double listBoxHeight = DeviceListBox.ActualHeight;
             double windowHeight = listBoxHeight; // Padding
-            this.Height = windowHeight+60;
+            this.Height = windowHeight + 48;
         }
 
         private void HighlightCurrentDefaultDevice()
@@ -106,6 +108,22 @@ namespace AudioDeviceSwitcher
                 return fullName.Substring(0, maxLength) + "...";
             }
             return fullName;
+        }
+        private void Window_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if (e.LeftButton == MouseButtonState.Pressed)
+            {
+                DragMove();
+            }
+        }
+        private void Close_btn_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
+
+        private void Mimimize_btn_Click(object sender, RoutedEventArgs e)
+        {
+            this.WindowState = WindowState.Minimized;
         }
     }
 }
