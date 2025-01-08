@@ -40,5 +40,10 @@
                 <ImageBrush ImageSource="/icons.png"/>
             </Button.Background>
         </Button>
+        <Button x:Name="Mimimize_btn" HorizontalAlignment="Right" Margin="0,7,29,0" VerticalAlignment="Top" BorderThickness="0,0,0,0" BorderBrush="{x:Null}" Width="16" Height="16" Click="Mimimize_btn_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="/icons_minimize-01.png"/>
+            </Button.Background>
+        </Button>
     </Grid>
 </Window>

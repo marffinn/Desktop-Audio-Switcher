@@ -120,5 +120,10 @@ namespace AudioDeviceSwitcher
         {
             Close();
         }
+
+        private void Mimimize_btn_Click(object sender, RoutedEventArgs e)
+        {
+            this.WindowState = WindowState.Minimized;
+        }
     }
 }
