@@ -11,11 +11,15 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="close.png" />
+    <None Remove="minimize.png" />
     <None Remove="sound-card.png" />
   </ItemGroup>
 
   <ItemGroup>
-    <Content Include="sound-card.ico" />
+    <Resource Include="sound-card.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
 
   <ItemGroup>
@@ -25,7 +29,15 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="sound-card.png" />
+    <Resource Include="close.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="minimize.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="sound-card.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
 
   <ItemGroup>
