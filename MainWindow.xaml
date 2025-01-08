@@ -100,7 +100,7 @@
                 </Style>
             </Button.Style>
         </Button>
-        <Rectangle HorizontalAlignment="Left" Height="40" Margin="8,0,0,0" VerticalAlignment="Top" Width="40">
+        <Rectangle HorizontalAlignment="Center" Height="40" Margin="8,0,0,0" VerticalAlignment="Top" Width="40">
             <Rectangle.Fill>
                 <ImageBrush ImageSource="/sound-card.png"/>
             </Rectangle.Fill>
