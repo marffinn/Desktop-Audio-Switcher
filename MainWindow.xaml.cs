@@ -18,6 +18,7 @@ namespace AudioDeviceSwitcher
         public MainWindow()
         {
             InitializeComponent();
+
             enumerator = new MMDeviceEnumerator();
             devices = enumerator.EnumerateAudioEndPoints(DataFlow.Render, DeviceState.Active);
             audioController = new CoreAudioController();
@@ -44,14 +45,14 @@ namespace AudioDeviceSwitcher
         private void AdjustListBoxHeight()
         {
             int itemCount = DeviceListBox.Items.Count;
-            DeviceListBox.Height = itemCount * ItemHeight;
+            DeviceListBox.Height = itemCount * ItemHeight - 7;
         }
 
         private void AdjustWindowHeight()
         {
             double listBoxHeight = DeviceListBox.ActualHeight;
             double windowHeight = listBoxHeight; // Padding
-            this.Height = windowHeight+60;
+            this.Height = windowHeight + 48;
         }
 
         private void HighlightCurrentDefaultDevice()
@@ -115,7 +116,7 @@ namespace AudioDeviceSwitcher
                 DragMove();
             }
         }
-        private void CloseApp(object sender) 
+        private void Close_btn_Click(object sender, RoutedEventArgs e)
         {
             Close();
         }

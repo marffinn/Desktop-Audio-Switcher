@@ -11,6 +11,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="26432.png" />
     <None Remove="icons.png" />
     <None Remove="sound-card.png" />
   </ItemGroup>
@@ -26,6 +27,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="26432.png" />
     <Resource Include="icons.png" />
     <Resource Include="sound-card.png" />
   </ItemGroup>
