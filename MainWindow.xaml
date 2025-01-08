@@ -35,12 +35,12 @@
             </ListBox.ItemContainerStyle>
         </ListBox>
         <Rectangle x:Name="MainAppBar" HorizontalAlignment="Center" Height="30" VerticalAlignment="Top" Width="400" Fill="#FF231818" MouseDown="Window_MouseDown"/>
-        <Button x:Name="Close_btn" HorizontalAlignment="Right" Margin="374,7,8,0" VerticalAlignment="Top" BorderThickness="0,0,0,0" Width="16" Height="16" Click="Close_btn_Click">
+        <Button x:Name="Close_btn" HorizontalAlignment="Right" Margin="374,7,8,0" VerticalAlignment="Top" BorderThickness="0,0,0,0" Width="9" Height="9" Click="Close_btn_Click">
             <Button.Background>
-                <ImageBrush ImageSource="/icons.png"/>
+                <ImageBrush ImageSource="/close.png"/>
             </Button.Background>
         </Button>
-        <Button x:Name="Mimimize_btn" HorizontalAlignment="Right" Margin="0,7,29,0" VerticalAlignment="Top" BorderThickness="0,0,0,0" BorderBrush="{x:Null}" Width="16" Height="16" Click="Mimimize_btn_Click">
+        <Button x:Name="Mimimize_btn" HorizontalAlignment="Right" Margin="0,5,29,0" VerticalAlignment="Top" BorderThickness="0,0,0,0" BorderBrush="{x:Null}" Width="9" Height="9" Click="Mimimize_btn_Click">
             <Button.Background>
                 <ImageBrush ImageSource="/minimize.png"/>
             </Button.Background>
