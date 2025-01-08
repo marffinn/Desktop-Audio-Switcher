@@ -18,18 +18,15 @@ namespace AudioDeviceSwitcher
         public MainWindow()
         {
             InitializeComponent();
-
             enumerator = new MMDeviceEnumerator();
             devices = enumerator.EnumerateAudioEndPoints(DataFlow.Render, DeviceState.Active);
             audioController = new CoreAudioController();
             PopulateDeviceList();
         }
-
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             AdjustWindowHeight(); // Adjust the window height after layout
         }
-
         private void PopulateDeviceList()
         {
             DeviceListBox.Items.Clear();
@@ -41,20 +38,17 @@ namespace AudioDeviceSwitcher
             AdjustWindowHeight();
             HighlightCurrentDefaultDevice();
         }
-
         private void AdjustListBoxHeight()
         {
             int itemCount = DeviceListBox.Items.Count;
             DeviceListBox.Height = itemCount * ItemHeight - 7;
         }
-
         private void AdjustWindowHeight()
         {
             double listBoxHeight = DeviceListBox.ActualHeight;
             double windowHeight = listBoxHeight; // Padding
             this.Height = windowHeight + 48;
         }
-
         private void HighlightCurrentDefaultDevice()
         {
             var defaultDevice = audioController.GetDefaultDevice(AudioSwitcher.AudioApi.DeviceType.Playback, AudioSwitcher.AudioApi.Role.Console);
@@ -70,7 +64,6 @@ namespace AudioDeviceSwitcher
                 }
             }
         }
-
         private void DeviceListBox_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
         {
             if (DeviceListBox.SelectedIndex >= 0)
@@ -86,7 +79,6 @@ namespace AudioDeviceSwitcher
                 }
             }
         }
-
         private void SetDefaultAudioDevice(MMDevice naudioDevice)
         {
             var audioSwitcherDevice = audioController.GetPlaybackDevices()
@@ -99,7 +91,6 @@ namespace AudioDeviceSwitcher
             audioSwitcherDevice.SetAsDefault();
             HighlightCurrentDefaultDevice();
         }
-
         private string GetShortenedName(string fullName)
         {
             const int maxLength = 60;
@@ -120,7 +111,6 @@ namespace AudioDeviceSwitcher
         {
             Close();
         }
-
         private void Mimimize_btn_Click(object sender, RoutedEventArgs e)
         {
             this.WindowState = WindowState.Minimized;
