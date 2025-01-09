@@ -13,7 +13,7 @@
         BorderBrush="#FF0E0E0E"
         MouseDown="Window_MouseDown">
     <Grid>
-        <ListBox x:Name="DeviceListBox" Margin="8,0,8,8" SelectionMode="Single" FontSize="10" SelectionChanged="DeviceListBox_SelectionChanged" Foreground="White" BorderBrush="{x:Null}" Padding="0,0,0,0" BorderThickness="0,0,0,0" Height="2" VerticalAlignment="Bottom" Background="{x:Null}">
+        <ListBox x:Name="DeviceListBox" Margin="4,0,4,4" SelectionMode="Single" FontSize="10" SelectionChanged="DeviceListBox_SelectionChanged" Foreground="White" BorderBrush="{x:Null}" Padding="0,0,0,0" BorderThickness="0,0,0,0" Height="2" VerticalAlignment="Bottom" Background="{x:Null}" HorizontalContentAlignment="Stretch">
 
             <ListBox.ItemContainerStyle>
                 <Style TargetType="ListBoxItem">
