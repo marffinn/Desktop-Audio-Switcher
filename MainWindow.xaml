@@ -6,7 +6,7 @@
         Height="200" 
         Loaded="Window_Loaded" 
         ResizeMode="CanMinimize" 
-        Icon="/sound-card.png" 
+        Icon="/assets/sound-card.png" 
         WindowStyle="None" 
         UseLayoutRounding="True" 
         Background="#FF462C2C" 
@@ -57,7 +57,7 @@
                 <Style TargetType="Button">
                     <Setter Property="Background">
                         <Setter.Value>
-                            <ImageBrush ImageSource="/minimize.png" />
+                            <ImageBrush ImageSource="/assets/minimize.png" />
                         </Setter.Value>
                     </Setter>
                     <Setter Property="BorderBrush" Value="{x:Null}" />
@@ -66,7 +66,7 @@
                         <Trigger Property="IsMouseOver" Value="True">
                             <Setter Property="Background">
                                 <Setter.Value>
-                                    <ImageBrush ImageSource="/minimize.png" />
+                                    <ImageBrush ImageSource="/assets/minimize.png" />
                                 </Setter.Value>
                             </Setter>
                         </Trigger>
@@ -76,13 +76,13 @@
         </Button>
         <Button x:Name="Close_btn" HorizontalAlignment="Right" Margin="0,6,5,0" VerticalAlignment="Top" BorderThickness="0,0,0,0" Width="9" Height="9" Click="Close_btn_Click" Padding="0,0,0,0">
             <Button.Background>
-                <ImageBrush ImageSource="/close.png" Stretch="Fill"/>
+                <ImageBrush ImageSource="/assets/close.png" Stretch="Fill"/>
             </Button.Background>
             <Button.Style>
                 <Style TargetType="Button">
                     <Setter Property="Background">
                         <Setter.Value>
-                            <ImageBrush ImageSource="/close.png" />
+                            <ImageBrush ImageSource="/assets/close.png" />
                         </Setter.Value>
                     </Setter>
                     <Setter Property="BorderBrush" Value="{x:Null}" />
@@ -92,7 +92,7 @@
                         <Trigger Property="IsMouseOver" Value="True">
                             <Setter Property="Background">
                                 <Setter.Value>
-                                    <ImageBrush ImageSource="/close.png" />
+                                    <ImageBrush ImageSource="/assets/close.png" />
                                 </Setter.Value>
                             </Setter>
                         </Trigger>
@@ -102,7 +102,7 @@
         </Button>
         <Rectangle HorizontalAlignment="Center" Height="40" Margin="8,0,0,0" VerticalAlignment="Top" Width="40">
             <Rectangle.Fill>
-                <ImageBrush ImageSource="/sound-card.png"/>
+                <ImageBrush ImageSource="/assets/sound-card.png"/>
             </Rectangle.Fill>
         </Rectangle>
     </Grid>

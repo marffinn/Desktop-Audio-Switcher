@@ -1,6 +1,6 @@
 # Audio Device Switcher
 
-![alt text](https://github.com/marffinn/Desktop-Audio-Switcher/blob/master/screenshot.png?raw=true)
+![alt text](https://github.com/marffinn/Desktop-Audio-Switcher/blob/master/assets/screenshot.png?raw=true)
 
 
 
