@@ -10,6 +10,14 @@
     <ApplicationIcon>sound-card.ico</ApplicationIcon>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <NoWarn>CS0535</NoWarn>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <NoWarn>CS0535</NoWarn>
+  </PropertyGroup>
+
   <ItemGroup>
     <None Remove="close.png" />
     <None Remove="minimize.png" />
@@ -20,12 +28,6 @@
     <Resource Include="sound-card.ico">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
-  </ItemGroup>
-
-  <ItemGroup>
-    <PackageReference Include="AudioSwitcher.AudioApi.CoreAudio" Version="3.0.3" />
-    <PackageReference Include="Hardcodet.Wpf.TaskbarNotification" Version="1.0.5" />
-    <PackageReference Include="NAudio" Version="2.2.1" />
   </ItemGroup>
 
   <ItemGroup>
