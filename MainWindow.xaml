@@ -45,61 +45,49 @@
             </ListBox.ItemContainerStyle>
         </ListBox>
         <Button x:Name="Minimize_btn"
-            HorizontalAlignment="Right"
-            Margin="0,6,19,0"
-            VerticalAlignment="Top"
-            BorderThickness="0"
-            Width="9"
-            Height="9"
-            Click="Minimize_btn_Click"
-            Padding="0">
-            <Button.Style>
-                <Style TargetType="Button">
-                    <Setter Property="Background">
-                        <Setter.Value>
-                            <ImageBrush ImageSource="/assets/minimize.png" />
-                        </Setter.Value>
-                    </Setter>
-                    <Setter Property="BorderBrush" Value="{x:Null}" />
-                    <Style.Triggers>
-                        <!-- Trigger for Mouse Over -->
-                        <Trigger Property="IsMouseOver" Value="True">
-                            <Setter Property="Background">
-                                <Setter.Value>
-                                    <ImageBrush ImageSource="/assets/minimize.png" />
-                                </Setter.Value>
-                            </Setter>
-                        </Trigger>
-                    </Style.Triggers>
-                </Style>
-            </Button.Style>
-        </Button>
-        <Button x:Name="Close_btn" HorizontalAlignment="Right" Margin="0,6,5,0" VerticalAlignment="Top" BorderThickness="0,0,0,0" Width="9" Height="9" Click="Close_btn_Click" Padding="0,0,0,0">
-            <Button.Background>
-                <ImageBrush ImageSource="/assets/close.png" Stretch="Fill"/>
-            </Button.Background>
-            <Button.Style>
-                <Style TargetType="Button">
-                    <Setter Property="Background">
-                        <Setter.Value>
-                            <ImageBrush ImageSource="/assets/close.png" />
-                        </Setter.Value>
-                    </Setter>
-                    <Setter Property="BorderBrush" Value="{x:Null}" />
-                    <Setter Property="Foreground" Value="{x:Null}" />
-                    <Style.Triggers>
+        HorizontalAlignment="Right"
+        Margin="0,6,19,0"
+        VerticalAlignment="Top"
+        BorderThickness="0"
+        Width="9"
+        Height="9"
+        Click="Minimize_btn_Click"
+        Padding="0">
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Grid>
+                        <!-- Define the Image as part of the ControlTemplate -->
+                        <Image x:Name="MinimizeImage" Source="/assets/minimize.png" Stretch="Fill" />
+                    </Grid>
+                    <ControlTemplate.Triggers>
                         <!-- Hover Trigger -->
                         <Trigger Property="IsMouseOver" Value="True">
-                            <Setter Property="Background">
-                                <Setter.Value>
-                                    <ImageBrush ImageSource="/assets/close.png" />
-                                </Setter.Value>
-                            </Setter>
+                            <Setter TargetName="MinimizeImage" Property="Opacity" Value="0.8" />
                         </Trigger>
-                    </Style.Triggers>
-                </Style>
-            </Button.Style>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Button.Template>
         </Button>
+
+
+        <Button x:Name="Close_btn" HorizontalAlignment="Right" Margin="0,6,5,0" VerticalAlignment="Top" BorderThickness="0" Width="9" Height="9" Click="Close_btn_Click" Padding="0">
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+                    <Grid>
+                        <!-- Define the Image as part of the ControlTemplate -->
+                        <Image x:Name="ButtonImage" Source="/assets/close.png" Stretch="Fill" />
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <!-- Hover Trigger -->
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="ButtonImage" Property="Source" Value="/assets/close.png" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+
+
         <Rectangle HorizontalAlignment="Center" Height="40" Margin="8,0,0,0" VerticalAlignment="Top" Width="40">
             <Rectangle.Fill>
                 <ImageBrush ImageSource="/assets/sound-card.png"/>

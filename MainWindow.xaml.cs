@@ -33,6 +33,7 @@ namespace AudioDeviceSwitcher
             foreach (var device in devices)
             {
                 DeviceListBox.Items.Add(GetShortenedName(device.FriendlyName));
+
             }
             AdjustListBoxHeight();
             AdjustWindowHeight();
