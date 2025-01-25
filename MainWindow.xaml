@@ -93,5 +93,6 @@
                 <ImageBrush ImageSource="/assets/sound-card.png"/>
             </Rectangle.Fill>
         </Rectangle>
+        <Button x:Name="Refresh_btn" Content="refresh" HorizontalAlignment="Left" Margin="5,6,0,0" VerticalAlignment="Top" Click="Refresh_btn_Click" Padding="0,0,0,0" BorderThickness="0,0,0,0" Width="50" Background="#FFFFEB3A" IsDefault="True"/>
     </Grid>
 </Window>

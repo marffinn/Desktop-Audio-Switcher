@@ -116,5 +116,12 @@ namespace AudioDeviceSwitcher
         {
             this.WindowState = WindowState.Minimized;
         }
+
+        private void Refresh_btn_Click(object sender, RoutedEventArgs e)
+        {
+            devices = enumerator.EnumerateAudioEndPoints(DataFlow.Render, DeviceState.Active);
+            audioController = new CoreAudioController();
+            PopulateDeviceList();
+        }
     }
 }
