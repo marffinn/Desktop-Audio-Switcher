@@ -118,6 +118,9 @@ ipch/
 *.vspx
 *.sap
 
+#Inno Setup Installer
+*.iss
+
 # Visual Studio Trace Files
 *.e2e
 
