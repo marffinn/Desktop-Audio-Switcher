@@ -11,6 +11,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="assets\close_hover.png" />
     <None Remove="assets\processing.png" />
     <None Remove="close.png" />
     <None Remove="minimize.png" />
@@ -22,6 +23,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="assets\close_hover.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="assets\processing.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>

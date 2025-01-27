@@ -3,13 +3,13 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="Desktop Audio Switcher" 
         Width="300"
-        Height="200" 
+        Height="130" 
         Loaded="Window_Loaded" 
         ResizeMode="CanMinimize" 
         Icon="/assets/sound-card.png" 
         WindowStyle="None" 
         UseLayoutRounding="True" 
-        Background="#FF462C2C" 
+        Background="#FF232242" 
         BorderBrush="#FF0E0E0E"
         MouseDown="Window_MouseDown">
     <Grid>
@@ -80,19 +80,12 @@
                     <ControlTemplate.Triggers>
                         <!-- Hover Trigger -->
                         <Trigger Property="IsMouseOver" Value="True">
-                            <Setter TargetName="ButtonImage" Property="Source" Value="/assets/close.png" />
+                            <Setter TargetName="ButtonImage" Property="Source" Value="/assets/close_hover.png" />
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
             </Button.Template>
         </Button>
-
-
-        <Rectangle HorizontalAlignment="Center" Height="40" Margin="8,0,0,0" VerticalAlignment="Top" Width="40">
-            <Rectangle.Fill>
-                <ImageBrush ImageSource="/assets/sound-card.png"/>
-            </Rectangle.Fill>
-        </Rectangle>
-        <Button x:Name="Refresh_btn" Content="refresh" HorizontalAlignment="Left" Margin="5,6,0,0" VerticalAlignment="Top" Click="Refresh_btn_Click" Padding="0,0,0,0" BorderThickness="0,0,0,0" Width="50" Background="#FFFFEB3A" IsDefault="True"/>
+        <Button x:Name="Refresh_btn" Content="refresh" HorizontalAlignment="Left" Margin="5,6,0,0" VerticalAlignment="Top" Click="Refresh_btn_Click" Padding="0,0,0,0" BorderThickness="0,0,0,0" Width="60" Background="#FFFFEB3A" IsDefault="True" Height="30"/>
     </Grid>
 </Window>
