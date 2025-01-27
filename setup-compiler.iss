@@ -2,7 +2,7 @@
 ; SEE THE DOCUMENTATION FOR DETAILS ON CREATING INNO SETUP SCRIPT FILES!
 
 #define MyAppName "DAS"
-#define MyAppVersion "1.1"
+#define MyAppVersion "1.1.1a"
 #define MyAppPublisher "DARTS"
 #define MyAppURL "https://darts.42web.io/"
 #define MyAppExeName "Desktop Audio Switcher.exe"
